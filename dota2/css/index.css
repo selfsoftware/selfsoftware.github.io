@@ -120,10 +120,11 @@ a:hover{
 	position: absolute;
 	background: url(../img/icons.png) no-repeat 14px -450px;
 	
+	
 }
 .dota2Index-turnpic{
 	height: 600px;
-	background: url(../img/D2-bg1.jpg) no-repeat;
+	position: relative;
 	cursor: pointer;
 	margin: 0 auto;
 	width: 1920px;
@@ -131,6 +132,21 @@ a:hover{
 .dota2Index-turnpic-BTN{
 	height: 100%;
 	position: relative;
+	z-index: 10;
+}
+.turnDiv{
+	top: 0;
+	left: 0;
+	height: 600px;
+	cursor: pointer;
+	margin: 0 auto;
+	width: 1920px;
+	position: absolute;
+}
+.turnDiv img{
+	position: absolute;
+	top: 0;
+	left: 0;
 	
 }
 .dota2Index-turnpic-BTN div{
@@ -150,25 +166,25 @@ a:hover{
 	background-color: rgba(0,0,0,0);
 	border-radius: 2px;
 }
-.dota2Index-turnpic-BTNL{
+.mainArrL{
 	left: 0;
 }
-.dota2Index-turnpic-BTNR{
+.mainArrR{
 	right: 0;
 }
-.dota2Index-turnpic-BTN .dota2Index-turnpic-BTNL a{
+.dota2Index-turnpic-BTN .mainArrL a{
 	background-position: -185px -857px;
 }
-.dota2Index-turnpic-BTN .dota2Index-turnpic-BTNR a{
+.dota2Index-turnpic-BTN .mainArrR a{
 	background-position: -95px -856px;
 	
 }
-.dota2Index-turnpic-BTN .dota2Index-turnpic-BTNL:hover a{
+.dota2Index-turnpic-BTN .mainArrL:hover a{
 	background-position: -197px -981px;
 	background-color: rgba(0,0,0,0.5);
 	border: 1px solid rgba(0,0,0,0.5);
 }
-.dota2Index-turnpic-BTN .dota2Index-turnpic-BTNR:hover a{
+.dota2Index-turnpic-BTN .mainArrR:hover a{
 	background-position: -95px -980px;
 	background-color: rgba(0,0,0,0.5);
 	border: 1px solid rgba(0,0,0,0.5);
@@ -177,17 +193,17 @@ a:hover{
 	position: absolute;
 	bottom: 60px;
 	left: 50%;
-	margin-left: 55px;
+	margin-left: -55px;
 	width: 110px;
 	height: 12px;
 }
-.dota2Index-turnpic-BTN li{
+.turnLi{
 	width: 100%;
 	height: 100%;
 	line-height: 10px;
 	
 }
-.dota2Index-turnpic-BTN li>a{
+.turnLi a{
 	display: inline-block;
 	width: 12px;
 	height: 12px;
@@ -197,12 +213,10 @@ a:hover{
 	margin-left: 5px;
 	border: none;
 }
-.dota2Index-turnpic-BTN li>a:hover{
+.liSelect{
 	border: 2px solid #f40;
 }
-.dota2Index-turnpic-BTN li a:first-child{
-	border: 2px solid #f40;
-}
+
 .dota2Index-sectionbtn{
 	height: 95px;
 	margin-bottom: 50px;
@@ -935,4 +949,19 @@ a:hover{
 }
 .family-guard{
 	color: #00b7f4;
+}
+.backTop{
+	text-align: center;
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	position: fixed;
+	display: none;
+	right: 100px;
+	bottom:300px ;
+	background-color: #666;
+	cursor: pointer;
+	font-weight: 700;
+	color: #fff;
 }

@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+body{
+	margin: 0 auto;
+	background-color: #f4f4f4;
+}
+.clearfix:before, .clearfix:after{
+	content: "";
+	display: table;
+}
+.clearfix:after{
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix{
+	*zoom: 1;
+}
+a{
+	color: #222;
+	text-decoration: none;
+}
+a:hover{
+	color: #f22e00 ;
+}
+i,em{
+	font-style: normal;
+}
+/*@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('../IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
