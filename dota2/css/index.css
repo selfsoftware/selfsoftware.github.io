@@ -142,11 +142,13 @@ a:hover{
 	margin: 0 auto;
 	width: 1920px;
 	position: absolute;
+	
 }
 .turnDiv img{
 	position: absolute;
 	top: 0;
 	left: 0;
+	display: none;
 	
 }
 .dota2Index-turnpic-BTN div{
@@ -214,7 +216,8 @@ a:hover{
 	border: none;
 }
 .liSelect{
-	border: 2px solid #f40;
+	border: 2px solid #f40 !important;
+	background-color: transparent !important;
 }
 
 .dota2Index-sectionbtn{
@@ -363,20 +366,26 @@ a:hover{
 	font-size: 14px;
 	color: #999;
 }
-.news-tabs li:hover{
-	border-color: #999;
-	position: relative;
-}
-.news-tabs li:hover a{
-	color: #ccc;
-}
-.news-tabs .news-tabs-1{
-	border-color: #999;
-	position: relative;
+
+.news-tabs-li{
+	border-color: #999 !important;
+	position: relative !important;
 	
 }
-.news-tabs .news-tabs-1 a{
-	color: #ccc;
+.news-tabs-a{
+	color: #ccc !important;
+}
+.tabs-details{
+	position: relative;
+}
+.tabs-details>div{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.news-display{
+	display: block !important;
 }
 .news-tab1{
 	display: block;
@@ -489,8 +498,11 @@ a:hover{
 	height: 314px;
 	background-color: #000;
 }
-.dota2Index-RhotDownNav a{
-	display: block;
+.dota2Index-RhotDownNav>div a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
 	height: 277px;
 }
 .dota2Index-RhotDownNav span{
@@ -500,7 +512,12 @@ a:hover{
 	line-height: 42px;
 	text-align: center;
 }
+.match-show{
+	display: block !important;
+}
 .dota2Index-RhotDownNav img{
+	width: 418px;
+	height: 233px;
 	border: 1px solid transparent;
 }
 .dota2Index-RhotDownNav a:hover img{
@@ -512,17 +529,13 @@ a:hover{
 }
 .dota2Index-RhotDownNav ul{
 	position: absolute;
-
 	bottom: 18px;
 	left: 50%;
 	margin-left: -49px;
 	width: 98px;
 	
 }
-.dota2Index-RhotDownNav ul>li:first-child{
-	border: 2px solid red;
-	background-color: transparent;
-}
+
 .dota2Index-RhotDownNav li{
 	box-sizing: border-box;
 	margin-left: 10px;
@@ -532,9 +545,9 @@ a:hover{
 	background-color: #999;
 	border-radius: 50%;
 }
-.dota2Index-RhotDownNav li:hover{
-	border: 2px solid red;
-	background-color: transparent;
+.match-li{
+	border: 2px solid red !important;
+	background-color: transparent !important;
 }
 .dota2Index-act{
 	height: 747px;
@@ -557,19 +570,7 @@ a:hover{
 	line-height: 35px;
 	width: 100%;
 }
-.dota2Index-act-Lt li:nth-child(4) a{
-	color: #00C0FF;
-}
-.dota2Index-act-Lt li:nth-child(4):after{
-	content: "";
-	display: block;
-	position: absolute;
-	bottom: -11px;
-	left: 0;
-	width: 140px;
-	height: 2px;
-	background-color: #00C0FF;
-}
+
 .dota2Index-act-Lt i{
 	height: 100%;
 	width: 40px;
@@ -607,7 +608,7 @@ a:hover{
 	width: 1px;
 	background-color: #666;
 }
-.dota2Index-act-Lt li:hover:after{
+.activeLi::after{
 	content: "";
 	display: block;
 	position: absolute;
