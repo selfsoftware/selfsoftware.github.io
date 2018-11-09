@@ -632,13 +632,21 @@ a:hover{
 	border: 1px solid #363636;
 	box-sizing: border-box;
 	padding-bottom: 38px;
+	position: relative;
+	
 }
 .dota2Index-act-Lntrue{
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
 	padding: 40px 40px 10px;
-	position: relative;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.activeDivSelect{
+	display: block ;
 }
 .dota2Index-act-Lntrue1{
 	box-sizing: border-box;
@@ -712,7 +720,7 @@ a:hover{
 	position: absolute;
 	width: 114px;
 	height: 28px;
-	bottom: -40px;
+	bottom: -2px;
 	left: 50%;
 	margin-left: -57px;
 	display: block;
@@ -740,7 +748,20 @@ a:hover{
 	background-color: #15161a;
 	position: relative;
 }
+.update-pic{
+	position: relative;
+	
+}
+.update-pic a{
+	position: absolute;
+	top: 0;
+	left: 95px;
+	width: 230px;
+	height: 159px;
+}
 .dota2Index-act-RupPic img{
+	width: 230px;
+	height: 135px;
 	border: 1px solid transparent;
 	margin: 0 auto 5px;
 	display: block;
@@ -767,10 +788,10 @@ a:hover{
 .dota2Index-act-RupPic ul{
 	display: block;
 	position: absolute;
-	width: 120px;
+	width: 80px;
 	bottom: 20px;
 	left: 50%;
-	margin-left: -60px;
+	margin-left: -40px;
 }
 .dota2Index-act-RupPic ul>li{
 	display: block;
@@ -786,15 +807,7 @@ a:hover{
 	box-sizing: border-box;
 	border: 2px solid transparent;
 }
-.dota2Index-act-RupPic li:first-child{
-	
-	border: 2px solid red;
-	background-color: transparent;
-}
-.dota2Index-act-RupPic li:hover{
-	border: 2px solid red;
-	background-color: transparent;
-}
+
 .dota2Index-act-RupPic li>a{
 	display: block;
 	width: 100%;
