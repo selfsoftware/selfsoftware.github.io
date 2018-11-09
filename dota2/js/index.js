@@ -122,6 +122,7 @@ $(function() {
 	//活动中心
 	(function() {
 		var $li = $(".dota2Index-act-Lt").children("ul").children("li");
+		
 		var idx = 3;
 		$li.on("mouseenter", function() {
 			$(this).addClass("activeLi").siblings("li").removeClass("activeLi");
@@ -136,22 +137,24 @@ $(function() {
 		var showConfig = [{
 				left: "70px",
 				top: "10px",
-				width: "200px"
-				zIndex: "1"
+				width: "200px",
+				zIndex: 1
 			},
 			{
 				left: "95px",
 				top: 0,
-				width: "230px"
-				zIndex: "10"
+				width: "230px",
+				zIndex: 10
 			},
 			{
 				left: "150px",
 				top: "10px",
-				width: "200px"
-				zIndex: "1"
+				width: "200px",
+				zIndex: 1
 			}
 		];
 		
+		
 	}());
+	
 })
