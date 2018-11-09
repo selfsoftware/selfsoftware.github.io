@@ -134,25 +134,54 @@ $(function() {
 	}());
 	//版本更新
 	(function() {
-		var showConfig = [{
-				left: "70px",
-				top: "10px",
-				width: "200px",
-				zIndex: 1
+/*		var showConfig = [{
+				left: "60px",
+				top: "20px",
+				height: "125px",
+				zIndex: 1,
+				opacity:0.4
 			},
 			{
 				left: "95px",
 				top: 0,
-				width: "230px",
-				zIndex: 10
+				height: "159px",
+				zIndex: 10,
+				opacity:1
 			},
 			{
-				left: "150px",
-				top: "10px",
-				width: "200px",
-				zIndex: 1
+				left: "130px",
+				top: "20px",
+				height: "125px",
+				zIndex: 1,
+				opacity:0.4
 			}
 		];
+		var showImg= [
+			{
+				height:"101px"
+			},
+			{
+				height:"135px"
+			},
+			{
+				height:"101px"
+			},
+		];
+		var idx = 0;
+		var $li = $(".dota2Index-act-RupPic").children("ul").children("li");
+		$li.on("click",function(){
+			idx = $(this).index();
+			$(this).addClass("liSelect").siblings("li").removeClass("liSelect");
+			$(".update-pic").children("a").eq(idx).css(showConfig[1])
+			.children("img").css(showImg[1]);
+			$(".update-pic").children("a").eq(idx).prev("a").css(showConfig[0])
+			.children("img").css(showImg[0]);
+			$(".update-pic").children("a").eq(idx).next("a").css(showConfig[2])
+			.children("img").css(showImg[2]);
+		});*/
+		
+		
+		
 		
 		
 	}());

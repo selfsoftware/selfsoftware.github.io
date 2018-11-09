@@ -753,11 +753,13 @@ a:hover{
 	
 }
 .update-pic a{
-	position: absolute;
-	top: 0;
 	left: 95px;
-	width: 230px;
+	top: 0;
 	height: 159px;
+	z-index: 10;
+	opacity:1;
+	position: absolute;
+	background-color: #000;
 }
 .dota2Index-act-RupPic img{
 	width: 230px;
