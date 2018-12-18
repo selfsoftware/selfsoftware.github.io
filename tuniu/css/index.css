@@ -69,6 +69,7 @@ a:hover{
 }
 .hd_nav_right>li{
     padding: 0 10px;
+    position: relative;
 }
 .hd_nav_right>li:nth-child(3)>a,
 .hd_nav_right>li:nth-child(4)>a,
@@ -190,4 +191,14 @@ a:hover{
     height: 10px;
     display: block;
     margin-top: 9px;
+}
+.icon_appDownLoad{
+    display: none;
+    z-index: 10;
+    position: absolute;
+    left: -200px;
+    top: 29px;
+    height: 310px;
+    width: 274px;
+    background: url(../images/app_download.png)no-repeat top right;
 }
