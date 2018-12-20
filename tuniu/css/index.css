@@ -248,7 +248,8 @@ a:hover{
     left: 50%;
     top: 100px;
     margin-left: -650px;
-    
+    display: none;
+    z-index: 10;
 }
 .left_fix>li:nth-child(even){
     width: 20px;
@@ -266,13 +267,38 @@ a:hover{
     background-color: #fff;
     padding: 5px;
 }
-.item_hover>a{
-    color: #fff !important;
-}
+
 
 .left_fix>li>a{
     width: 30px;
     height: 30px;
     display: block;
     color: #666;
+}
+.bottom_box{
+   
+    width: 100%;
+    height: 170px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.bottom_ad{
+    width: 110px;
+    height: 70px;
+    border-top-right-radius:50px;
+    border-bottom-right-radius: 50px; 
+    position: fixed;
+    bottom: 10px;
+    left: -110px;
+    background-color: #333;
+}
+.right_fix{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #333;
 }
