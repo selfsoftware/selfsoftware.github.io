@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--[if lt IE 9]-->
-        <script></script>
-    <!--[endif]-->
+    <!--[if lt IE 9]>
+        <script src="../libs/html5shiv-3.7.3/src/html5shiv.js"></script>
+        <script src="../libs/Respond-1.4.2/src/respond.js"></script>
+    <![endif]-->
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../libs/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/index.css">
@@ -15,7 +16,69 @@
 </head>
 
 <body>
+    <div class="login_regist">
+        <div class="lr_page clearfix">
+            <div class="choose_tab">
+                <div class="login_tab">登录</div>
+                <div class="regist_tab">注册</div>
+                <i class="closebtn">关闭</i>
+            </div>
+            <div class="choose_div clearfix">
+                <div class="login_div">
+                    <form method="GET">
+                        <div class="form-group">
+                            <label for="userName">用户名</label>
+                            <input type="text" class="form-control" id="userName" placeholder="用户名">
+                        </div>
+                        <div class="form-group">
+                            <label for="Password1">密码</label>
+                            <input type="password" class="form-control" id="Password1" placeholder="密码">
+                        </div>
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"  class="rbInput">
+                                记住密码
+                            </label>
+                        </div>
+                        <div class="row" style="line-height: 34px;">
+                                <button type="submit" class="btn btn-primary col-md-3 col-md-offset-3">登录</button>
+                                <div class="col-md-6">
+                                    没有账号？
+                                    <a href="javascript:;" class="registNow">直接注册</a>
+                                </div>
+                        </div>
+                        <a href="javascript:;" class="col-md-offset-3 text-danger">忘记密码？</a>
+                        
+                    </form>
 
+                </div>
+                <div class="regist_div">
+                    <form>
+                        <div class="form-group">
+                            <label for="userNamereg">用户名</label>
+                            <input type="text" class="form-control" placeholder="用户名" id="userNamereg">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordreg">密码</label>
+                            <input type="password" class="form-control" id="passwordreg" placeholder="密码">
+                        </div>
+                        <div class="form-group">
+                                <label for="email">邮箱</label>
+                                <input type="email" class="form-control" id="email" placeholder="邮箱">
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="btn btn-success col-md-offset-3">注册</button>
+                            有账号？
+                            <a href="javascript:;" class="loginNow">直接登录</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
     <!-- 顶部广告 -->
     <div class="page_top clearfix">
         <div class="page_content">
@@ -27,16 +90,19 @@
         <!-- 登录一级简单导航 -->
         <div class="hd_top">
             <div class="hd_top_inner clearfix total">
+
                 <ul class="hd_login_left clearfix">
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:;" class="login">
                             登录
+
                         </a>
                         |
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="javascript:;" class="regist">
                             注册
+
                         </a>
                     </li>
                     <li>
@@ -252,6 +318,7 @@
     <div class="footer"></div>
 
     <script src="../libs/jq1.12.4.js"></script>
+    <script src="../libs/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script src="../js/index.js"></script>
 </body>
 
