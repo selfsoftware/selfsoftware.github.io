@@ -33,12 +33,37 @@ $(function () {
         $(".icon_weixin").css("background-position", "-63px -49px");
     })
     // 固定的3个导航信息栏
+    
     // 左边
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 500) {
-            $(".left_fix").show();
+    $(window).scroll(function (e) {
+        console.log($(window).scrollTop() );
+        console.log(e);
+        if ($(window).scrollTop() > 500) {
+            // $(".left_fix").show();
+            if($(".left_fix").css("display")=="none"){
+                $(".left_fix").css("display","block").animate({
+                    "top":"300"
+                },400,function(){
+                    $(this).animate({
+                        "top":"100"
+                    },100);
+                });
+            }
         } else {
-            $(".left_fix").hide();
+            // $(".left_fix").hide();
+            if($(".left_fix").css("display")=="block"){
+                let top = $(window).height() + $(".left_fix").outerHeight()+200;
+                $(".left_fix").animate({
+                    top:top
+                },300,function(){
+                    $(".left_fix").css("display","none");
+                    if($(".left_fix").css("top")!="-100px"){
+                        $(".left_fix").css("top","-100px");
+                    }
+                });
+
+            }
+           
         }
 
     })
