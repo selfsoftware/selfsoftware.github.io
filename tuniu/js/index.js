@@ -37,7 +37,6 @@ $(function () {
     // 左边
     $(window).scroll(function (e) {
         console.log($(window).scrollTop() );
-        // console.log(e);
         if ($(window).scrollTop() > 500) {
             // $(".left_fix").show();
             if($(".left_fix").css("display")=="none"){

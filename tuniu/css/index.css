@@ -1,5 +1,15 @@
 body{
     position: relative;
+    font-family: "serif ,Tahoma, Helvetica, Arial, sans-serif,Trebuchet MS, Verdana";
+}
+@font-face{
+    font-family: "bootsIcon";
+	src: url('../libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot'); /* IE9 Compat Modes */
+	src: url('../libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('../libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff') format('woff'), /* Modern Browsers */
+             url('../libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'), /* Modern Browsers */
+             url('../libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('../libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg#bootsIcon') format('svg'); /* Legacy iOS */
 }
 i{
     font-style: normal;
@@ -31,12 +41,7 @@ a:hover{
     height: 60px;
     display: block;
 }
-.hd_top{
-    height: 30px;
-    background-color: #f8f8f8;
-    border: 1px solid #eee;
-    box-sizing: border-box;
-}
+
 .hd_main{
     height: 100px;
     background-color: rgb(117, 69, 69);
@@ -200,9 +205,8 @@ a:hover{
 }
 .hd_map{
     display: none;
-    width: 1188px;
     position: absolute;
-    left: -970px;
+    left: -935px;
     top: 29px;
     background-color: #fff;
     padding: 20px 0 30px;
@@ -295,9 +299,7 @@ a:hover{
 }
 /* 主体县空白 */
 .main{
-    width: 1190px;
     height: 2000px;
-    
 }
 .mainBox{
     width: 100%;
