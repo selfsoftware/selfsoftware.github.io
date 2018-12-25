@@ -67,8 +67,8 @@ $(function () {
 
     })
     // 底部
-    $(".bottom_box").click(function () {
-        $(this).animate({
+    $(".bottom_box_inner>a").click(function () {
+        $(".bottom_box").animate({
             left: "-2000px"
         }, 600, function () {
             $(".bottom_ad").animate({
