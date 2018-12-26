@@ -37,6 +37,7 @@ $(function () {
     // 左边
     $(window).scroll(function (e) {
         console.log($(window).scrollTop() );
+        
         if ($(window).scrollTop() > 500) {
             // $(".left_fix").show();
             if($(".left_fix").css("display")=="none"){
@@ -58,6 +59,7 @@ $(function () {
                     $(".left_fix").css("display","none");
                     if($(".left_fix").css("top")!="-100px"){
                         $(".left_fix").css("top","-100px");
+                        
                     }
                 });
 
