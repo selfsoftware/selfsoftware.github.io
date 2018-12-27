@@ -45,9 +45,39 @@ a:hover {
 
 .hd_main {
     height: 100px;
-    background-color: rgb(117, 69, 69);
-}
+    /* width: 100%; */
 
+}
+.hd_logo{
+    position: relative;
+}
+.hd_main_logo{
+    background-color: rgb(201, 127, 127);
+    height: 100px;
+}
+.hd_main_seach{
+    background-color: rgb(138, 236, 168);
+    height: 100px;
+}
+.sever_call{
+    background-color: rgb(82, 122, 253);
+    height: 100px;
+}
+.hd_logo>a{
+    overflow: hidden;
+    display: block;
+    height: 100px;
+    width: 200px;
+    float: left;
+}
+.city_selector{
+    float: left;
+    cursor: pointer;
+}
+.hd_logo>a>img{
+    height: 95px;
+    width: 250px;
+}
 .hd_nav {
     height: 40px;
     background-color: rgb(94, 153, 79);
@@ -481,7 +511,7 @@ a:hover {
     background-color: #333;
     position: relative;
 }
-.full_ad{
+.right_fix_full>div>span{
     position: relative;
 }
 .full_ad_pic{
@@ -499,6 +529,12 @@ a:hover {
 }
 .full_icons{
     margin-top: 10px;
+}
+.app_icon{
+    position: absolute;
+    top: 0;
+    left: -274px;
+    display: none;
 }
 .full_ad:hover .full_ad_pic{
     display: block;
@@ -524,5 +560,39 @@ a:hover {
     font-size: 18px;
     font-weight: 900;
     text-decoration: none;
-    color: #666;
+    color: #dddddd;
+}
+.full_buttom{
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    margin-top: -150px;
+}
+.icon_entity{
+    position: absolute;
+    left: -80px;
+    top: 0;
+    width: 80px;
+    height: 40px;
+    background: #333;
+    color: #b86f02dc;
+    border-left: 4px solid #b86f02dc;
+    box-sizing: border-box;
+    display: none;
+    cursor: pointer;
+}
+.icon_current{
+    display: block !important;
+}
+.slideInLeft{
+    animation-name: slideInLeft;
+    transition: all 0.5s;
+}
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-30px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }

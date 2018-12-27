@@ -33,40 +33,59 @@ $(function () {
         $(".icon_weixin").css("background-position", "-63px -49px");
     })
     // 固定的3个导航信息栏
-    
+
     // 左边
     $(window).scroll(function (e) {
-        console.log($(window).scrollTop() );
-        
         if ($(window).scrollTop() > 500) {
             // $(".left_fix").show();
-            if($(".left_fix").css("display")=="none"){
-                $(".left_fix").css("display","block").animate({
-                    "top":"300"
-                },400,function(){
+            if ($(".left_fix").css("display") == "none") {
+                $(".left_fix").css("display", "block").animate({
+                    "top": "300"
+                }, 400, function () {
                     $(this).animate({
-                        "top":"100"
-                    },100);
+                        "top": "100"
+                    }, 100);
                 });
             }
         } else {
             // $(".left_fix").hide();
-            if($(".left_fix").css("display")=="block"){
-                let top = $(window).height() + $(".left_fix").outerHeight()+200;
+            if ($(".left_fix").css("display") == "block") {
+                let top = $(window).height() + $(".left_fix").outerHeight() + 200;
                 $(".left_fix").animate({
-                    top:top
-                },300,function(){
-                    $(".left_fix").css("display","none");
-                    if($(".left_fix").css("top")!="-100px"){
-                        $(".left_fix").css("top","-100px");
-                        
+                    top: top
+                }, 300, function () {
+                    $(".left_fix").css("display", "none");
+                    if ($(".left_fix").css("top") != "-100px") {
+                        $(".left_fix").css("top", "-100px");
+
                     }
                 });
 
             }
-           
+
         }
 
+    })
+    // 右边
+    function rightIconHover(eles){
+        $(eles).each(function(i,item){
+            $item = $(item);
+            $item.on("mouseenter",function(){
+                $(this).children("div").addClass("animated slideInLeft icon_current")
+                .siblings("a").css("color","#b86f02dc");
+            }).on("mouseleave",function(){
+                $(this).children("div").removeClass("icon_current")
+                .siblings("a").css("color","#ddd");
+            })
+        })
+    }
+    // 右边图标hover--函数调用
+    rightIconHover(".full_buttom>span");
+    rightIconHover(".full_icons>span");
+    // 回到顶部
+    $(".returnTop").click(function(){
+        $("html,body").animate({"scrollTop":"0"},300);
+        // $(window).scrollTop("0");
     })
     // 底部
     $(".bottom_box_inner>a").click(function () {
@@ -89,42 +108,43 @@ $(function () {
         })
     });
     // 登录，注册按钮事件
-    $(".login").click(function(){
+    $(".login").click(function () {
         loginIn();
         showLoading(".login_tab", ".login_div");
     });
-    $(".regist").click(function(){
+    $(".regist").click(function () {
         loginIn();
         showLoading(".regist_tab", ".regist_div");
     });
-    $(".loginNow").click(function(){
+    $(".loginNow").click(function () {
         showLoading(".login_tab", ".login_div");
     });
-    $(".registNow").click(function(){
+    $(".registNow").click(function () {
         showLoading(".regist_tab", ".regist_div");
     });
-    $(".login_regist").click(function(){
+    $(".login_regist").click(function () {
         $(this).animate({
             width: 0,
             height: 0
-        }, 300,function(){
-            $(this).css("display","none");
+        }, 300, function () {
+            $(this).css("display", "none");
         });
     });
-   
-    $(".lr_page").click(function(e){
+
+    $(".lr_page").click(function (e) {
         if (e.stopPropagation) {
             e.stopPropagation();
         } else {
             e.cancelBubble = true;
         }
     });
+
     function loginIn() {
         $(".login_regist").css("display", "block").animate({
             width: "100%",
             height: "100%"
         }, 300);
-       
+
     };
     // 
     $(".login_tab").click(function () {
@@ -132,14 +152,14 @@ $(function () {
     });
     $(".regist_tab").click(function () {
         showLoading(".regist_tab", ".regist_div");
-        
+
     });
     // 关闭按钮
     $(".closebtn").click(function () {
         $(".login_regist").animate({
             width: 0,
             height: 0
-        }, 300,function(){
+        }, 300, function () {
             $(this).css("display", "none");
         });
     });
@@ -147,24 +167,24 @@ $(function () {
     function showLoading(selectTab, selectDiv) {
         $(selectTab).addClass("choosed_tab").siblings("div").removeClass("choosed_tab");
         $(selectDiv).addClass("choosed_div").siblings("div").removeClass("choosed_div");
-        
+
     };
     // 登录验证
-    
-    
-    $(".registNow").parent().siblings("button").click(function(){
+
+
+    $(".registNow").parent().siblings("button").click(function () {
         // console.log($(".rbInput").prop("checked"));
-        
-        let name,pass;
-        if($(".rbInput").prop("checked")){
+
+        let name, pass;
+        if ($(".rbInput").prop("checked")) {
             name = $("#userName").val();
             pass = $("#Password1").val();
-            localStorage.setItem("username",name);
-            localStorage.setItem("password",pass);
+            localStorage.setItem("username", name);
+            localStorage.setItem("password", pass);
             console.log(11);
             name = localStorage.getItem("username");
             pass = localStorage.getItem("password");
-        }else{
+        } else {
             name = "";
             pass = "";
             localStorage.removeItem("username");

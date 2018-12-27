@@ -35,22 +35,22 @@
                             <label for="Password1">密码</label>
                             <input type="password" class="form-control" id="Password1" placeholder="密码">
                         </div>
-                        
+
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox"  class="rbInput">
+                                <input type="checkbox" class="rbInput">
                                 记住密码
                             </label>
                         </div>
                         <div class="row" style="line-height: 34px;">
-                                <button type="submit" class="btn btn-primary col-md-3 col-md-offset-3">登录</button>
-                                <div class="col-md-6">
-                                    没有账号？
-                                    <a href="javascript:;" class="registNow">直接注册</a>
-                                </div>
+                            <button type="submit" class="btn btn-primary col-md-3 col-md-offset-3">登录</button>
+                            <div class="col-md-6">
+                                没有账号？
+                                <a href="javascript:;" class="registNow">直接注册</a>
+                            </div>
                         </div>
                         <a href="javascript:;" class="col-md-offset-3 text-danger">忘记密码？</a>
-                        
+
                     </form>
 
                 </div>
@@ -65,8 +65,8 @@
                             <input type="password" class="form-control" id="passwordreg" placeholder="密码">
                         </div>
                         <div class="form-group">
-                                <label for="email">邮箱</label>
-                                <input type="email" class="form-control" id="email" placeholder="邮箱">
+                            <label for="email">邮箱</label>
+                            <input type="email" class="form-control" id="email" placeholder="邮箱">
                         </div>
                         <div class="row">
                             <button type="submit" class="btn btn-success col-md-offset-3">注册</button>
@@ -260,9 +260,19 @@
             </div>
         </div>
         <!-- 搜索及页面logo -->
-        <div class="hd_main">
-            <div class="hd_main_logo"></div>
-
+        <div class="hd_main row">
+            <div class="hd_main_logo col-md-3 col-sm-3 col-xs-3">
+                <div class="hd_logo">
+                    <a href="javascript:;"><img src="../images/logo_tuniu.png"></a>
+                    <div class="city_selector">
+                        北京站
+                        <i class=" glyphicon  glyphicon-chevron-down"></i>
+                    </div>
+                    <div class="show_city"></div>
+                </div>
+            </div>
+            <div class="hd_main_seach col-md-6 col-sm-3 col-xs-3"></div>
+            <div class="sever_call col-md-3 col-sm-3 col-xs-3"></div>
         </div>
         <div class="hd_nav"></div>
     </div>
@@ -304,24 +314,24 @@
             <div class="bottom_box_inner">
                 <a class="glyphicon glyphicon-remove bottom_close" aria-hidden="true" style="font-size: 30px;text-decoration: none"></a>
                 <!-- glyphicon glyphicon-remove -->
-                
+
                 <div class="bottom_box_bg">
                     <a href="javascript:;"></a>
                     <img src="../images/bottom_box.png">
                 </div>
-               <form action="javascript:;" class="getgifts">
-                <div class="form-group">
-                    <input type="text" class="form-control" style="text-align: center">
+                <form action="javascript:;" class="getgifts">
+                    <div class="form-group">
+                        <input type="text" class="form-control" style="text-align: center">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success btn-block">立即免费领取</button>
+                    </div>
+                </form>
+                <div class="bottom_box_appbtn">
+                    <button type="button" class="btn-block btn btn-default active">iPhone</button>
+                    <button type="button" class="btn-block btn btn-default active">Android</button>
+                    <button type="button" class="btn-block btn btn-default active">iPad</button>
                 </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-success btn-block">立即免费领取</button>
-                </div>
-               </form>
-               <div class="bottom_box_appbtn">
-                   <button type="button" class="btn-block btn btn-default active">iPhone</button>
-                   <button type="button" class="btn-block btn btn-default active">Android</button>
-                   <button type="button" class="btn-block btn btn-default active">iPad</button>
-               </div>
             </div>
         </div>
         <!-- bottom的小广告 -->
@@ -334,14 +344,14 @@
                     <a href="javascript:;"></a>
                     <div class="full_ad_pic animated slideInLeft">
                         <a href="javascript:;">
-                            <img src="../images/right_fix_adone.png" >
+                            <img src="../images/right_fix_adone.png">
                         </a>
                     </div>
                 </div>
                 <div class="full_icons">
                     <span>
                         <a href="javascript:;">APP</a>
-                        <div>
+                        <div class="app_icon">
                             <a href="javascript:;">
                                 <img src="../images/app_download.png">
                             </a>
@@ -349,28 +359,49 @@
                     </span>
                     <span>
                         <a href="javascript:;" class="glyphicon glyphicon-user"></a>
-                        <div></div>
+                        <div class="icon_entity">
+                            个人中心
+                        </div>
                     </span>
                     <span>
-                        <a href="javascript:;" class="glyphicon glyphicon-heart"></a>
-                        <div></div>
+                        <a href="javascript:;" class="glyphicon glyphicon-heart-empty"></a>
+                        <div class="icon_entity">
+                            我的关注
+                        </div>
                     </span>
                     <span>
                         <a href="javascript:;" class="glyphicon glyphicon-list-alt"></a>
-                        <div></div>
+                        <div class="icon_entity">
+                            我的订单
+                        </div>
                     </span>
                     <span>
                         <a href="javascript:;" class="glyphicon glyphicon-duplicate"></a>
-                        <div></div>
+                        <div class="icon_entity">我的礼券</div>
                     </span>
                     <span>
                         <a href="javascript:;" class="glyphicon glyphicon-envelope"></a>
-                        <div></div>
+                        <div class="icon_entity">我的提醒</div>
                     </span>
-                   
+                    <span>
+                        <a href="javascript:;" class="glyphicon glyphicon-headphones"></a>
+                        <div class="icon_entity">我的客服</div>
+                    </span>
+
                 </div>
                 <div class="full_buttom">
-
+                    <span>
+                        <a href="javascript:;" class="glyphicon glyphicon-book"></a>
+                        <div class="icon_entity">调查问卷</div>
+                    </span>
+                    <span>
+                        <a href="javascript:;" class="glyphicon glyphicon-pencil"></a>
+                        <div class="icon_entity">意见建议</div>
+                    </span>
+                    <span>
+                        <a href="javascript:;" class="glyphicon glyphicon-arrow-up returnTop"></a>
+                        <div class="icon_entity returnTop">返回顶部</div>
+                    </span>
                 </div>
             </div>
             <div class="right_fix_some"></div>
