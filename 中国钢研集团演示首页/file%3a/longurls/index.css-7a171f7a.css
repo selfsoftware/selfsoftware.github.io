@@ -2,9 +2,10 @@ body,html{
     margin: 0;
     padding: 0;
 }
-body{
-   font-family:  "Microsoft Yahei", "微软雅黑", Tahoma, Arial, serif,Helvetica, "STHeiti";
-}
+/* body{
+    width: 1285px;
+    margin: 0 auto;
+} */
 ul,li,i,p{
     list-style: none;
     font-style: normal;
@@ -26,7 +27,7 @@ a:hover{
     width: 1200px;
     height: 82px;
     background-color: #fff;
-   margin-top: 20px;
+   
 }
 .top_brand{
     line-height: 82px;
@@ -67,12 +68,6 @@ a:hover{
     cursor: pointer;
     padding: 5px;
     text-align: center;
-}
-.top_seach>div>span>a:nth-child(1){
-    color: #333;
-}
-.top_seach>div>span>a:nth-child(2){
-    color: #999;
 }
 .down_selc{
     position: absolute;
@@ -422,9 +417,8 @@ a:hover{
 }
 .bottom{
     background: url("../images/bottom.jpg") no-repeat center;
-    background-size: cover;
     width: 100%;
-    height: 450px;
+    height: 536px;
 }
 .new_tabs_nav{
     padding-top: 25px;
