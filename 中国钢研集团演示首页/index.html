@@ -436,11 +436,13 @@
                 $(".nav_right_tabs>div").eq(index + 1).addClass("current").siblings("div").removeClass(
                     "current");
             });
+            // 产品轮播
             $(".doc_right_item").on("mouseenter", function () {
                 let index = $(this).index();
                 $(this).addClass("current").siblings("div").removeClass("current");
                 $(".doc_left>img").attr("src",`images/doc_pic${index+1}.jpg`);
             });
+            
             $(".nav_ul>li").on("mouseenter",function(){
                 if($(this).index()<2){
                     $(this).addClass("current").siblings("li").removeClass("current");
