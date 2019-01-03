@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/发展历程.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="lib/pagination.css">
     <link rel="stylesheet" href="css/header.css">
-    <title>新闻详情</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/发展历程.css">
+    <link rel="stylesheet" href="css/newsList.css">
+    <title>集团新闻</title>
     <style>
-        .new_detail {
-            text-align: left;
-            font-size: 14px;
-            line-height: 60px;
-            height: 60px;
-            box-sizing: border-box;
-            padding-left: 10px;
-        }
 
-        .detail {
-            height: 1750px;
-            background: url("images/new_detail.png") no-repeat;
-        }
     </style>
 </head>
 
@@ -96,7 +86,7 @@
                         <div class="down_about_left">
                             <dl>
                                 <dt>新闻中心</dt>
-                                <dd><a href="javascript:;">集团新闻</a></dd>
+                                <dd><a href="newsList.html">集团新闻</a></dd>
                                 <dd><a href="javascript:;">最新公告</a></dd>
                                 <dd><a href="javascript:;">领导动态</a></dd>
                                 <dd><a href="javascript:;">国资要闻</a></dd>
@@ -137,22 +127,125 @@
     <div class="top_pic">
     </div>
 
-    <ol class="breadcrumb">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="javascript:;">新闻</a></li>
-        <li class="active">新闻详情</li>
-    </ol>
+    <!-- 标题 -->
+    <div class="about_us center clearfix">
+        <div class="title_select">
+            <ol class="breadcrumb">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="javascript:;">新闻</a></li>
+                <li class="active">集团新闻</li>
+            </ol>
+        </div>
+    </div>
+    <div class="newsList_rtate center clearfix">
+        <!-- 大轮播图 -->
+        <div id="newListRotate" class="carousel slide center  clearfix" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators  clearfix newsListol">
+                <li data-target="#newListRotate" data-slide-to="0" class="active">
+                    <!-- <img src="images/newsList_small1.png"> -->
+                </li>
+                <li data-target="#newListRotate" data-slide-to="1">
+                    <!-- <img src="images/newsList_small2.png"> -->
+                </li>
+                <li data-target="#newListRotate" data-slide-to="2">
+                    <!-- <img src="images/newsList_small3.png"> -->
+                </li>
+                <li data-target="#newListRotate" data-slide-to="3">
+                    <!-- <img src="images/newsList_small4.png"> -->
+                </li>
+                <li data-target="#newListRotate" data-slide-to="4">
+                    <!-- <img src="images/newsList_small5.png"> -->
+                </li>
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </ol>
 
-    <div class="detail center">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <!-- 图片 -->
+                    <img src="images/newsList_big1.png">
+                    <!-- 文本 -->
+                    <div class="carousel-caption">
+                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- 图片 -->
+                    <img src="images/newsList_big2.png">
+                    <!-- 文本 -->
+                    <div class="carousel-caption">
+                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- 图片 -->
+                    <img src="images/newsList_big3.png">
+                    <!-- 文本 -->
+                    <div class="carousel-caption">
+                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- 图片 -->
+                    <img src="images/newsList_big4.png">
+                    <!-- 文本 -->
+                    <div class="carousel-caption">
+                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- 图片 -->
+                    <img src="images/newsList_big5.png">
+                    <!-- 文本 -->
+                    <div class="carousel-caption">
+                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#newListRotate" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#newListRotate" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+    <!-- 翻页新闻详情 -->
+    <div class="newsList_detail center">
+        <div class="newsListTitle">
+            <ul class="clearfix">
+                <li class="current">2018</li>
+                <li>2017</li>
+                <li>2016</li>
+                <li>2015</li>
+                <li>2014</li>
+                <li>2013</li>
+                <li>2012</li>
+            </ul>
+            <span class="glyphicon glyphicon-menu-right"></span>
+        </div>
+        <div class="newsListBody">
+            <div class="newsListNav">
+                <p></p>
+            </div>
+            <div class="newsListSel">
+                <div id="demo"></div>
+            </div>
+        </div>
 
     </div>
     <div class="bottom"></div>
     <script src="lib/jq1.12.4.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="lib/pagination.js"></script>
     <script>
         $(function () {
-            // $(".header").load("发展历程.html .top");
-            // $(".top_pic").load("发展历程.html .top_pic");
             // 标题选项切换
             $(".nav_ul>li").on("mouseenter", function () {
                 if ($(this).index() < 2) {
@@ -161,6 +254,32 @@
             }).on("mouseleave", function () {
                 $(".nav_ul>li").removeClass("current");
             })
+            // 翻页写法
+            $(".newsListTitle>ul>li").on("click", function () {
+                $(this).addClass("current").siblings("li").removeClass("current");
+            })
+            // 
+
+
+            $('#demo').pagination({
+                dataSource: [1, 2, 3, 4, 5, 6, 7,8,9,10],
+                pageSize: 1,
+                showGoInput: true,
+                showGoButton: true,
+                prevText:"上一页",
+                nextText:"下一页",
+                goButtonText:"跳转",
+                showFirstOnEllipsisShow:false,
+                showLastOnEllipsisShow:false,
+                className:"paginationjs-theme-red paginationjs-big",
+                // callback: function (data, pagination) {
+                //     // template method of yourself
+                //     var html = template(data);
+                //     dataContainer.html(html);
+                // }
+            })
+
+
         })
     </script>
 </body>
