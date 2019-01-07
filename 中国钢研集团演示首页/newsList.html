@@ -21,7 +21,7 @@
     <!-- 导航栏 -->
     <div class="top center clearfix">
         <div class="top_brand">
-            <img src="images/title_icon.jpg">
+                <a href="index.html"><img src="images/title_icon.jpg"></a>
         </div>
         <div class="nav">
             <div class="top_seach">
@@ -139,27 +139,25 @@
     </div>
     <div class="newsList_rtate center clearfix">
         <!-- 大轮播图 -->
+        
         <div id="newListRotate" class="carousel slide center  clearfix" data-ride="carousel">
             <!-- Indicators -->
-            <ol class="carousel-indicators  clearfix newsListol">
-                <li data-target="#newListRotate" data-slide-to="0" class="active">
-                    <!-- <img src="images/newsList_small1.png"> -->
-                </li>
-                <li data-target="#newListRotate" data-slide-to="1">
-                    <!-- <img src="images/newsList_small2.png"> -->
-                </li>
-                <li data-target="#newListRotate" data-slide-to="2">
-                    <!-- <img src="images/newsList_small3.png"> -->
-                </li>
-                <li data-target="#newListRotate" data-slide-to="3">
-                    <!-- <img src="images/newsList_small4.png"> -->
-                </li>
-                <li data-target="#newListRotate" data-slide-to="4">
-                    <!-- <img src="images/newsList_small5.png"> -->
-                </li>
-                <span class="glyphicon glyphicon-menu-right"></span>
-            </ol>
+            <a class="glyphicon glyphicon-menu-right rotateNext" href="#newListRotate" role="button" data-slide="next"></a>
+            <div class="olcontain">
+                <ol class="carousel-indicators  clearfix newsListol">
+                    <li data-target="#newListRotate" data-slide-to="0" class="active">
+                    </li>
+                    <li data-target="#newListRotate" data-slide-to="1">
+                    </li>
+                    <li data-target="#newListRotate" data-slide-to="2">
+                    </li>
+                    <li data-target="#newListRotate" data-slide-to="3">
+                    </li>
+                    <li data-target="#newListRotate" data-slide-to="4">
+                    </li>
+                </ol>
 
+            </div>
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
@@ -167,7 +165,7 @@
                     <img src="images/newsList_big1.png">
                     <!-- 文本 -->
                     <div class="carousel-caption">
-                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                        加拿大多伦多大学Jack Young教授做客“钢研名家讲坛”
                     </div>
                 </div>
                 <div class="item">
@@ -175,7 +173,7 @@
                     <img src="images/newsList_big2.png">
                     <!-- 文本 -->
                     <div class="carousel-caption">
-                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                        王勇国务委员、郝鹏书记到中国钢研调研视察
                     </div>
                 </div>
                 <div class="item">
@@ -183,7 +181,7 @@
                     <img src="images/newsList_big3.png">
                     <!-- 文本 -->
                     <div class="carousel-caption">
-                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                        集团公司隆重召开纪念中国共产党成立97周年大会
                     </div>
                 </div>
                 <div class="item">
@@ -191,7 +189,7 @@
                     <img src="images/newsList_big4.png">
                     <!-- 文本 -->
                     <div class="carousel-caption">
-                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                        中国钢研参加第四届军民融合发展高技术装备成果展
                     </div>
                 </div>
                 <div class="item">
@@ -199,9 +197,10 @@
                     <img src="images/newsList_big5.png">
                     <!-- 文本 -->
                     <div class="carousel-caption">
-                        热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”
+                        集团公司统战人士、职代会主席团成员等参观考察中国运载火箭技术研究院
                     </div>
                 </div>
+               
             </div>
 
             <!-- Controls -->
@@ -230,21 +229,50 @@
             </ul>
             <span class="glyphicon glyphicon-menu-right"></span>
         </div>
-        <div class="newsListBody">
-            <div class="newsListNav">
-                <p></p>
+        <div class="yearcurrent">
+            <div class="newsListBody current center">
+                <!-- 新闻列表 2018-->
+                <div class="newsListNav">
+
+                </div>
+                <!-- 新闻分页 -->
+                <div class="newsListSel">
+                    <div id="demo"></div>
+                </div>
+                
             </div>
-            <div class="newsListSel">
-                <div id="demo"></div>
+            <div class="newsListBody center">
+                <!-- 新闻列表2017 -->
+                <div class="newsListNav1">
+
+                </div>
+                <!-- 新闻分页 -->
+                <div class="newsListSel">
+                    <div id="demo1"></div>
+                </div>
             </div>
         </div>
-
     </div>
     <div class="bottom"></div>
     <script src="lib/jq1.12.4.js"></script>
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script src="lib/pagination.js"></script>
+    <script src="lib/template-web.js"></script>
+    <script id="newsTemplate" type="text/html">
+
+        {{each news}}
+            <p>
+                <a href="companyINFO.html">{{$value.navs}}</a>
+                <span>{{$value.times}}</span>
+            </p>
+           {{/each}}
+       
+    </script>
     <script>
+        // $(".newsListol li").click(function(){
+        //     console.log($(this).index())
+        // })
+       
         $(function () {
             // 标题选项切换
             $(".nav_ul>li").on("mouseenter", function () {
@@ -257,29 +285,163 @@
             // 翻页写法
             $(".newsListTitle>ul>li").on("click", function () {
                 $(this).addClass("current").siblings("li").removeClass("current");
+                let index = $(this).index();
+                $(".yearcurrent>div").eq(index).addClass("current").siblings().removeClass("current");
             })
-            // 
-
-
+            
+            
+            // 新闻列表右边按钮
+            let spanIndex = 0;
+            $(".newsListTitle>span").click(function(){
+                spanIndex++;
+                if(spanIndex>6){
+                    spanIndex=0;
+                }
+                $(".newsListTitle>ul>li").eq(spanIndex).addClass("current").siblings("li").removeClass("current");
+                $(".yearcurrent>div").eq(spanIndex).addClass("current").siblings().removeClass("current");
+            })
+            
+            // 分页模板数据
+            var data = [
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"李卫院士出席全国政协新年茶话会",times:"2018-12-30"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2018-12-29"},
+                {navs:"集团公司马守礼同志荣获“2018年度优秀交换员”荣誉称号",times:"2018-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2018-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2018-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2018-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2018-12-26"},
+                {navs:"集团公司开展2018年年底前安全生产大检查",times:"2018-12-25"},
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"李卫院士出席全国政协新年茶话会",times:"2018-12-30"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2018-12-29"},
+                {navs:"集团公司马守礼同志荣获“2018年度优秀交换员”荣誉称号",times:"2018-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2018-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2018-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2018-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2018-12-26"},
+                {navs:"集团公司开展2018年年底前安全生产大检查",times:"2018-12-25"},
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"李卫院士出席全国政协新年茶话会",times:"2018-12-30"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2018-12-29"},
+                {navs:"集团公司马守礼同志荣获“2018年度优秀交换员”荣誉称号",times:"2018-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2018-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2018-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2018-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2018-12-26"},
+                {navs:"集团公司开展2018年年底前安全生产大检查",times:"2018-12-25"},
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"李卫院士出席全国政协新年茶话会",times:"2018-12-30"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2018-12-29"},
+                {navs:"集团公司马守礼同志荣获“2018年度优秀交换员”荣誉称号",times:"2018-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2018-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2018-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2018-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2018-12-26"},
+                {navs:"集团公司开展2018年年底前安全生产大检查",times:"2018-12-25"},
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"李卫院士出席全国政协新年茶话会",times:"2018-12-30"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2018-12-29"},
+                {navs:"集团公司马守礼同志荣获“2018年度优秀交换员”荣誉称号",times:"2018-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2018-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2018-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2018-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2018-12-26"},
+                {navs:"集团公司开展2018年年底前安全生产大检查",times:"2018-12-25"},
+                
+            ];
+            // data1数据
+            var data1 = [
+                {navs:"集团公司马守礼同志荣获“2018年度优秀交换员”荣誉称号",times:"2017-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2017-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2017-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2017-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2017-12-26"},
+                {navs:"集团公司开展2017年年底前安全生产大检查",times:"2017-12-25"},
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"李卫院士出席全国政协新年茶话会",times:"2017-12-30"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2017-12-29"},
+                {navs:"集团公司马守礼同志荣获“2017年度优秀交换员”荣誉称号",times:"2017-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2017-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2017-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2017-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2017-12-26"},
+                {navs:"集团公司开展2017年年底前安全生产大检查",times:"2017-12-25"},
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"集团公司马守礼同志荣获“2017年度优秀交换员”荣誉称号",times:"2017-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2017-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2017-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2017-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2017-12-26"},
+                {navs:"集团公司开展2017年年底前安全生产大检查",times:"2017-12-25"},
+                {navs:"中国钢研党委中心组专题学习习近平总书记在庆祝改革开放40周年大会上的讲话和中央经...",times:"2019-1-02"},
+                {navs:"李卫院士出席全国政协新年茶话会",times:"2017-12-30"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2017-12-29"},
+                {navs:"集团公司马守礼同志荣获“2017年度优秀交换员”荣誉称号",times:"2017-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2017-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2017-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2017-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2017-12-26"},
+                {navs:"集团公司开展2017年年底前安全生产大检查",times:"2017-12-25"},
+                {navs:"集团公司完成“三重一大”报送工作",times:"2017-12-29"},
+                {navs:"集团公司马守礼同志荣获“2017年度优秀交换员”荣誉称号",times:"2017-12-28"},
+                {navs:"集团公司参加国资委第二十一期法治讲堂视频会议",times:"2017-12-28"},
+                {navs:"热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”",times:"2017-12-37"},
+                {navs:"集团公司武装部被地方武装部门评为先进集体",times:"2017-12-26"},
+                {navs:"干勇院士主讲中国钢研大讲堂第二期 ",times:"2017-12-26"},
+                {navs:"集团公司开展2017年年底前安全生产大检查",times:"2017-12-25"},
+                
+            ];
+            // for (var i = 0; i < 100; i++) {
+            //     var nav = `${i+1}热烈祝贺刘正东、包汉生同志荣获第三届“杰出工程师奖”和“杰出工程师青年奖”`;
+            //     var time = "2018-12-16";
+            //     data.push({
+            //         navs: nav,
+            //         times: time
+            //     });
+            // }
+            // 分页栏2018
             $('#demo').pagination({
-                dataSource: [1, 2, 3, 4, 5, 6, 7,8,9,10],
-                pageSize: 1,
+                // locator:"news",
+                dataSource: data,
+                pageSize: 13,
                 showGoInput: true,
                 showGoButton: true,
-                prevText:"上一页",
-                nextText:"下一页",
-                goButtonText:"跳转",
-                showFirstOnEllipsisShow:false,
-                showLastOnEllipsisShow:false,
-                className:"paginationjs-theme-red paginationjs-big",
-                // callback: function (data, pagination) {
-                //     // template method of yourself
-                //     var html = template(data);
-                //     dataContainer.html(html);
-                // }
+                prevText: "上一页",
+                nextText: "下一页",
+                goButtonText: "跳转",
+                showFirstOnEllipsisShow: false,
+                showLastOnEllipsisShow: false,
+                className: "paginationjs-theme-red paginationjs-big",
+                callback: function (data, pagination) {
+                    // template method of yourself
+                    var html = template("newsTemplate", {
+                        news: data
+                    });
+                    $(".newsListNav").html(html);
+                }
             })
-
-
+            // 分栏页2017
+            $('#demo1').pagination({
+                // locator:"news",
+                dataSource: data1,
+                pageSize: 13,
+                showGoInput: true,
+                showGoButton: true,
+                prevText: "上一页",
+                nextText: "下一页",
+                goButtonText: "跳转",
+                showFirstOnEllipsisShow: false,
+                showLastOnEllipsisShow: false,
+                className: "paginationjs-theme-red paginationjs-big",
+                callback: function (data, pagination) {
+                    // template method of yourself
+                    var html1 = template("newsTemplate", {
+                        news: data
+                    });
+                    $(".newsListNav1").html(html1);
+                }
+            })
         })
     </script>
 </body>
